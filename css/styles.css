@@ -1,0 +1,9 @@
+body {
+  font-size: 18px;
+  font-family: monospace;
+
+}
+
+#result {
+  margin-top: 2em;
+}
