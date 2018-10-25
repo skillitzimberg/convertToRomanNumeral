@@ -1,14 +1,16 @@
-function convertDigit(digit, onesChar, fivesChar) {
+function convertDigit(digit, onesChar, fivesChar, tensChar) {
   var romanDigit = "";
 
   // FOR ONE - FOUR
   var numOnes = 0;
 
-  if (digit >= 5) {
+  if (digit >= 9) {
+    romanDigit += onesChar + tensChar;
+  } else if (digit >= 5) {
     numOnes = digit - 5;
     romanDigit += fivesChar;
   } else if (digit === 4) {
-    romanDigit += onesChar + fivesChar
+    romanDigit += onesChar + fivesChar;
   } else {
     numOnes = digit;
   }
@@ -21,7 +23,20 @@ function convertDigit(digit, onesChar, fivesChar) {
 }
 
 function romanize(input) {
-  return convertDigit(input, "I", "V");
+  var result = ""
+  var remainder = (input % 1000);
+  var thousands = input - remainder;
+  var hundreds = remainder - remainder % 100;
+  remainder = remainder - hundreds;
+  var tens = remainder - remainder % 10;
+  var ones = remainder = remainder - tens;
+
+  result += convertDigit(thousands / 1000, "M", "e", "e");
+  result += convertDigit(hundreds / 100, "C", "D", "M");
+  result += convertDigit(tens / 10, "X", "L", "C");
+  result += convertDigit(ones, "I", "V", "X");
+
+  return result;
 }
 
 

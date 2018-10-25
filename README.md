@@ -34,8 +34,8 @@ M       1,000
 #### Spec: for up to 9
 ** Expect: ** romanize(9) === "IX";
 
-#### Spec: for up to
-** Expect: ** romanize() === "";
+#### Spec: split input into 1000's, 100's 10's, & 1's
+** Expect: ** parseTenBase(2345) === "2000, 300, 40, 5";
 
 #### Spec:
 ** Expect: ** romanize( ) === "";
