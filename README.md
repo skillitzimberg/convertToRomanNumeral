@@ -1,24 +1,14 @@
-# Project Name
+# Romanize Arabic Numbers
 
-#### Brief Description
+#### Changes Arabic numbers into Roman numerals
 
-#### By
+#### By Phil Mass & Scott Bergler
 
 ## Description
 
-This program will
+This program takes a numeric input and return that number in Roman numerals.
 
 ### Specifications:
-
-Symbol  Value
-I       1
-V       5
-X       10
-L       50
-C       100
-D       500
-M       1,000
-
 #### Spec: for 1
 - [x] ** Expect: ** romanize(1) === "I";
 
@@ -32,14 +22,13 @@ M       1,000
 - [x] ** Expect: ** romanize(8) === "VIII";
 
 #### Spec: for up to 9
-** Expect: ** romanize(9) === "IX";
+- [x] ** Expect: ** romanize(9) === "IX";
 
 #### Spec: split input into 1000's, 100's 10's, & 1's
-** Expect: ** parseTenBase(2345) === "2000, 300, 40, 5";
+- [x] ** Expect: ** parseTenBase(2345) === "2000, 300, 40, 5";
 
-#### Spec:
-** Expect: ** romanize( ) === "";
-
+#### Spec: pass each place number to convertDigit
+- [x] ** Expect: ** romanize(2348) === "MMCCCXLVIII";
 
 
 ## Setup/Installation Requirements
@@ -59,4 +48,4 @@ HTML, CSS, & Javascript.
 
 Licensed under the MIT license.
 
-Copyright (c) 2018 **author & author_**
+Copyright (c) 2018 ** Scott Bergler & Phil Mass **
