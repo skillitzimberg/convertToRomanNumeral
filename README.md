@@ -26,7 +26,7 @@ M       1,000
 - [x] ** Expect: ** romanize(3) === "III";
 
 #### Spec: for up to 4
-** Expect: ** romanize(4) === "IV";
+- [x] ** Expect: ** romanize(4) === "IV";
 
 #### Spec: for up to 8
 ** Expect: ** romanize(8) === "VIII";

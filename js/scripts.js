@@ -1,13 +1,22 @@
-function convertDigit(digit, onesChar) {
+function convertDigit(digit, onesChar, fivesChar) {
   var romanDigit = "";
-  for (var index = 0; index < digit; index++) {
+  var numOnes = 0;
+
+  if(digit === 4) {
+    romanDigit += onesChar + fivesChar
+  } else {
+    numOnes = digit;
+  }
+  
+  for (var index = 0; index < numOnes; index++) {
     romanDigit += onesChar;
   }
+
   return romanDigit;
 }
 
 function romanize(input) {
-  return convertDigit(input, "I");
+  return convertDigit(input, "I", "V");
 }
 
 
